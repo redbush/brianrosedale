@@ -1,0 +1,13 @@
+.navbar.navbar-default{role: 'navigation'}
+  .container-fluid
+    .navbar-header
+      %button{type: 'button', class: 'navbar-toggle collapsed', data: {toggle: 'collapse', target: '#bs-navbar-collapse'}}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Brian Rosedale', home_path, class: 'navbar-brand'
+    .collapse.navbar-collapse#bs-navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to 'Link', '#'
