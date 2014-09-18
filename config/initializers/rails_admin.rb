@@ -31,4 +31,18 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Post' do
+    list do
+      field :title
+      field :content
+    end
+
+    edit do
+      field :title
+      field :content
+      field :keywords
+      field :description
+    end
+  end
 end
