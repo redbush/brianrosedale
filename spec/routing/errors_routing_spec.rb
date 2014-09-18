@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Errors', type: :routing do
 
-  context '404' do
+  context 'routing' do
 
-    it 'GET routes to errors#show' do
+    it 'GET 404 routes to errors#show' do
       expect(get: '/404').to route_to(
                                  controller: 'errors',
                                  action: 'show',
@@ -12,7 +12,7 @@ RSpec.describe 'Errors', type: :routing do
                              )
     end
 
-    it 'POST routes to errors#show' do
+    it 'POST 404 routes to errors#show' do
       expect(post: '/404').to route_to(
                                   controller: 'errors',
                                   action: 'show',
@@ -20,11 +20,7 @@ RSpec.describe 'Errors', type: :routing do
                               )
     end
 
-  end
-
-  context '500' do
-
-    it 'GET routes to errors#show' do
+    it 'GET 500 routes to errors#show' do
       expect(get: '/500').to route_to(
                                  controller: 'errors',
                                  action: 'show',
@@ -32,7 +28,7 @@ RSpec.describe 'Errors', type: :routing do
                              )
     end
 
-    it 'POST routes to errors#show' do
+    it 'POST 500 routes to errors#show' do
       expect(post: '/500').to route_to(
                                   controller: 'errors',
                                   action: 'show',
