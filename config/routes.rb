@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admins', as: 'rails_admin'
+
   get 'errors/show'
 
   get 'home', to: 'pages#home', as: :home
