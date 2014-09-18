@@ -9,5 +9,7 @@
       = link_to 'Brian Rosedale', home_path, class: 'navbar-brand'
     .collapse.navbar-collapse#bs-navbar-collapse
       %ul.nav.navbar-nav.navbar-right
-        %li
-          = link_to 'Link', '#'
+        %li{class: current_page?(home_path) ? 'active' : 'inactive'}
+          = link_to 'Home', home_path
+        %li{class: current_page?(posts_path) ? 'active' : 'inactive'}
+          = link_to 'Blog', posts_path
