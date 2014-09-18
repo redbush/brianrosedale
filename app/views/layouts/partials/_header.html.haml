@@ -13,3 +13,6 @@
           = link_to 'Home', home_path
         %li{class: current_page?(posts_path) ? 'active' : 'inactive'}
           = link_to 'Blog', posts_path
+        - if admin_signed_in?
+          %li
+            = link_to 'Admin Dashboard', rails_admin.dashboard_path
