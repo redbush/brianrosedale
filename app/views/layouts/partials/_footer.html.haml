@@ -1,3 +1,12 @@
 #footer
   .container
     %h4 Get in Touch
+
+    #footer-links
+      .row
+        .col-xs-12.col-md-4
+          = mail_to 'brian.j.rosedale@gmail.com', 'brian.j.rosedale@gmail.com', id: 'email-link'
+        .col-xs-12.col-md-4
+          = link_to '/redbush', 'https://github.com/redbush', target: '_blank', id: 'github-link'
+        .col-xs-12.col-md-4
+          = link_to '/in/brianrosedale', 'https://linkedin.com/in/brianrosedale', target: '_blank', id: 'linkedin-link'

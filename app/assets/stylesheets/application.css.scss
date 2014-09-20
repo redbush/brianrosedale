@@ -80,4 +80,33 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 2px solid $secondary-color;
   color: $main-color;
   min-height: 120px;
+  a {
+    color: $main-color;
+  }
+  #footer-links {
+    margin-bottom: $margin;
+  }
+}
+
+@mixin add_image_before($image_name) {
+  display: inline-block;
+  margin-bottom: 5px;
+  &:before {
+    content: url("#{$image_name}");
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+}
+
+#email-link {
+  @include add_image_before("email.png")
+}
+
+#github-link {
+  @include add_image_before("github.png")
+}
+
+#linkedin-link {
+  @include add_image_before("linkedin.png")
 }
