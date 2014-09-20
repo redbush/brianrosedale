@@ -10,6 +10,8 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
   %body
     = render 'layouts/partials/header'
-    = render 'layouts/partials/flash'
-    = yield
+    #main-container
+      .container
+        = render 'layouts/partials/flash'
+        = yield
     = render 'layouts/partials/footer'

@@ -1,18 +1,21 @@
 .navbar.navbar-default{role: 'navigation'}
-  .container-fluid
+  .container
     .navbar-header
       %button{type: 'button', class: 'navbar-toggle collapsed', data: {toggle: 'collapse', target: '#bs-navbar-collapse'}}
         %span.sr-only Toggle navigation
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'Brian Rosedale', home_path, class: 'navbar-brand'
+      = link_to '{"developer":"Brian Rosedale"}', home_path, class: 'navbar-brand'
+      %p.navbar-text.hidden-xs.hidden-sm FULL-STACK DEVELOPER
     .collapse.navbar-collapse#bs-navbar-collapse
       %ul.nav.navbar-nav.navbar-right
-        %li{class: current_page?(home_path) ? 'active' : 'inactive'}
-          = link_to 'Home', home_path
         %li{class: current_page?(posts_path) ? 'active' : 'inactive'}
           = link_to 'Blog', posts_path
+        %li
+          = link_to 'Work', '#'
+        %li
+          = link_to 'About', '#'
         - if admin_signed_in?
           %li
             = link_to 'Admin Dashboard', rails_admin.dashboard_path

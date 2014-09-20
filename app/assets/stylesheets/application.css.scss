@@ -1,0 +1,70 @@
+// Common
+$brand-primary: #2E8FEF;
+$main-color: #ffffff;
+$secondary-color: #133B63;
+$font-size: 18px;
+$font-size-sm: 15px;
+$margin: 20px;
+$padding: 20px;
+$padding-lg: 60px;
+
+// Components
+$border-radius-base: 0px;
+$border-radius-small: 0px;
+$border-radius-large: 0px;
+//component-active-bg
+
+// Navbar
+$navbar-height: 60px;
+$navbar-margin-bottom: 0px;
+$navbar-default-border: $main-color;
+$navbar-default-bg: $main-color;
+$navbar-default-link-color: $brand-primary;
+$navbar-default-link-hover-color: $secondary-color;
+
+// Typography
+$font-size-base: $font-size;
+
+// Scaffolding
+$body-bg: #2269AF;
+$text-color: #777777;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "pages";
+
+// Typography Media Queries
+@media (max-width: $screen-md-min) {
+  body {
+    font-size: $font-size-sm !important;
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+      font-size: $font-size;
+    }
+  }
+  .navbar-brand {
+    font-size: $font-size-sm !important;
+    font-weight: bold;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: $margin 0px $margin 0px;
+}
+
+#main-container {
+  background: $main-color;
+  padding: $padding-lg 0px $padding-lg 0px;
+}
+
+@media (max-width: $screen-md-min) {
+  #main-container {
+    padding: $padding 0px $padding 0px;
+  }
+}
+
+#footer {
+  border-top: 2px solid $secondary-color;
+  color: #ffffff;
+  min-height: 120px;
+}
