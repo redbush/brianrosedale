@@ -16,4 +16,11 @@ RSpec.describe 'Pages', type: :request do
     expect(response).to render_template(:work)
   end
 
+  it 'GET about returns success' do
+    get '/about'
+
+    expect(response.status).to be(200)
+    expect(response).to render_template(:about)
+  end
+
 end

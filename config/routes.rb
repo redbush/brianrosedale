@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get 'home', to: 'pages#home', as: :home
   get 'work', to: 'pages#work', as: :work
+  get 'about', to: 'pages#about', as: :about
 
   match ':status', to: 'errors#show', constraints: {status: /\d{3}/}, via: :all
 
