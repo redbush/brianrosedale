@@ -9,4 +9,13 @@ module PostsHelper
     end
   end
 
+  def chunk_text(text, n)
+    chunked_text = ''
+    begin
+      chunked_text = "#{text[0..n]} ..."
+    rescue NoMethodError
+      chunked_text
+    end
+  end
+
 end
