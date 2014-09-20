@@ -9,6 +9,8 @@
   .col-xs-12.col-md-8
     - @posts.each do |post|
       = render 'posts/partials/post', post: post
-
     = paginate @posts
+
+    - unless @posts.any?
+      %h2 Coming soon!
   .col-xs-12.col-md-4
