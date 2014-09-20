@@ -3,6 +3,6 @@
     = link_to post.title, post
   .post_created_at
     Date:
-    = post.created_at
+    = format_datetime(post.created_at)
   .post_content
     = post.content
