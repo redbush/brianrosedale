@@ -42,7 +42,6 @@ RailsAdmin.config do |config|
       field :title
       field :summary
       field :content
-      field :created_at
       field :keywords
       field :description
     end

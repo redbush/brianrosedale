@@ -5,7 +5,10 @@
 - content_for :description do
   %meta{name: 'description', content: "Hi! I'm Brian. I'm a Full-Stack Developer / Programming Generalist. Click to read my blog."}
 
-- @posts.each do |post|
-  = render 'posts/partials/post', post: post
+.row
+  .col-xs-12.col-md-8
+    - @posts.each do |post|
+      = render 'posts/partials/post', post: post
 
-= paginate @posts
+    = paginate @posts
+  .col-xs-12.col-md-4

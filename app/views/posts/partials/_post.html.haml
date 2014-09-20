@@ -1,8 +1,9 @@
 .post
   .post_title
-    = link_to post.title, post
+    %h3= link_to post.title, post
   .post_created_at
-    Date:
-    = format_datetime(post.created_at)
+    %h5
+      Date:
+      = format_datetime(post.created_at)
   .post_summary
-    = post.summary
+    %p= post.summary
