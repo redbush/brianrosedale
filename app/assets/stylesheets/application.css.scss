@@ -3,7 +3,7 @@ $brand-primary: #2E8FEF;
 $main-color: #ffffff;
 $secondary-color: #133B63;
 $font-size: 18px;
-$font-size-sm: 15px;
+$font-size-sm: 16px;
 $margin: 20px;
 $padding: 20px;
 $padding-lg: 60px;
@@ -12,7 +12,9 @@ $padding-lg: 60px;
 $border-radius-base: 0px;
 $border-radius-small: 0px;
 $border-radius-large: 0px;
-//component-active-bg
+$navbar-default-toggle-hover-bg: $secondary-color;
+$navbar-default-toggle-icon-bar-bg: $brand-primary;
+$navbar-default-toggle-border-color: $brand-primary;
 
 // Navbar
 $navbar-height: 60px;
@@ -21,6 +23,8 @@ $navbar-default-border: $main-color;
 $navbar-default-bg: $main-color;
 $navbar-default-link-color: $brand-primary;
 $navbar-default-link-hover-color: $secondary-color;
+$navbar-default-link-active-color: $secondary-color;
+$navbar-default-link-active-bg: $main-color;
 
 // Typography
 $font-size-base: $font-size;
@@ -33,18 +37,27 @@ $text-color: #777777;
 @import "bootstrap";
 @import "pages";
 
+// Navbar
+
+.nav .active {
+  border-bottom: 2px solid $secondary-color;
+}
+
 // Typography Media Queries
 @media (max-width: $screen-md-min) {
   body {
     font-size: $font-size-sm !important;
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4 {
       font-weight: bold;
       font-size: $font-size;
     }
+    h5, h6 {
+      font-size: $font-size-sm;
+      font-weight: 500;
+    }
   }
   .navbar-brand {
-    font-size: $font-size-sm !important;
-    font-weight: bold;
+    font-size: $font-size !important;
   }
 }
 
@@ -65,6 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer {
   border-top: 2px solid $secondary-color;
-  color: #ffffff;
+  color: $main-color;
   min-height: 120px;
 }
