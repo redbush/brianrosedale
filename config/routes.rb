@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :posts, only: [:index, :show]
+  concern :paginatable do
+    get '(page/:page)', action: :index, on: :collection, as: ''
+  end
+
+
+  resources :posts, only: [:index, :show], concerns: :paginatable
 
   devise_for :admins
 

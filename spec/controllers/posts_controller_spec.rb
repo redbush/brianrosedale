@@ -6,10 +6,14 @@ RSpec.describe PostsController, type: :controller do
 
   context 'GET index' do
 
-    it 'assigns all posts as @posts' do
+    it 'assigns a max of three posts to @posts' do
+      4.times do
+        FactoryGirl.create(:post)
+      end
+
       get :index
 
-      expect(assigns(:posts)).to eq([post])
+      expect(assigns(:posts).size).to eq(3)
     end
 
   end

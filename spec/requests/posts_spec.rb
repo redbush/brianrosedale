@@ -12,6 +12,12 @@ RSpec.describe 'Posts', type: :request do
       expect(response.status).to be(200)
     end
 
+    it '/posts/page/1 returns success' do
+      get 'posts/page/1'
+
+      expect(response.status).to be(200)
+    end
+
   end
 
   context 'GET /posts/:id' do
