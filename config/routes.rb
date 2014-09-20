@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'errors/show'
 
   get 'home', to: 'pages#home', as: :home
+  get 'work', to: 'pages#work', as: :work
 
   match ':status', to: 'errors#show', constraints: {status: /\d{3}/}, via: :all
 
