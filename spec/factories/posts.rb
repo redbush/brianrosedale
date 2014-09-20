@@ -3,6 +3,7 @@
 FactoryGirl.define do
   factory :post do
     sequence(:title) {|n| "Title #{n}" }
+    sequence(:summary) {|n| "Summary #{n}" }
     sequence(:content) {|n| "Content #{n}" }
   end
 end

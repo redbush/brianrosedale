@@ -35,12 +35,14 @@ RailsAdmin.config do |config|
   config.model 'Post' do
     list do
       field :title
-      field :content
+      field :created_at
     end
 
     edit do
       field :title
+      field :summary
       field :content
+      field :created_at
       field :keywords
       field :description
     end

@@ -10,6 +10,12 @@ RSpec.describe Post, type: :model do
       expect(post).to_not be_valid
     end
 
+    it 'does not save when no summary' do
+      post = FactoryGirl.build(:post, summary: '')
+
+      expect(post).to_not be_valid
+    end
+
     it 'does not save when no content' do
       post = FactoryGirl.build(:post, content: '')
 

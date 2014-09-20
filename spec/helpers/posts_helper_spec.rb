@@ -20,22 +20,4 @@ RSpec.describe PostsHelper, type: :helper do
 
   end
 
-  context '#chunk_text' do
-
-    it 'shortens text to specified length' do
-      text = 'Here is text that I want shortened.'
-      expected_text = 'Here is text ...'
-
-      expect(helper.chunk_text(text, 11)).to eq(expected_text)
-    end
-
-    it 'returns empty string when invalid text' do
-      text = Object.new
-      expected_text = ''
-
-      expect(helper.chunk_text(text, 11)).to eq(expected_text)
-    end
-
-  end
-
 end

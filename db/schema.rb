@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140918033029) do
 
   create_table "posts", force: true do |t|
     t.string   "title",       null: false
+    t.text     "summary",     null: false
     t.text     "content",     null: false
     t.string   "keywords"
     t.string   "description"
