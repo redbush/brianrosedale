@@ -101,13 +101,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #email-link {
-  @include add_image_before("email.png")
+  @include add_image_before("<%= asset_path 'email.png' %>")
 }
 
 #github-link {
-  @include add_image_before("github.png")
+  @include add_image_before("<%= asset_path 'github.png' %>")
 }
 
 #linkedin-link {
-  @include add_image_before("linkedin.png")
+  @include add_image_before("<%= asset_path 'linkedin.png' %>")
 }
