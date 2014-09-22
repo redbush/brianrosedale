@@ -5,6 +5,7 @@ $secondary-color: #133B63;
 $font-size: 18px;
 $font-size-sm: 16px;
 $margin: 20px;
+$margin-sm: 5px;
 $padding: 20px;
 $padding-lg: 60px;
 
@@ -62,6 +63,11 @@ $text-color: #777777;
   }
 }
 
+// Page Header
+.page-header {
+    margin-top: 0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: $margin 0px $margin 0px;
 }
@@ -91,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @mixin add_image_before($image_name) {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: $margin-sm;
   &:before {
     content: url("#{$image_name}");
     display: inline-block;
