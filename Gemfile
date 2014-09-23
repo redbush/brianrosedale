@@ -38,6 +38,7 @@ gem 'autoprefixer-rails'
 gem 'rails_admin', '~> 0.6.2'
 gem 'devise', '~> 3.2.4'
 gem 'kaminari', '~> 0.16.1'
+gem 'friendly_id', '~> 5.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
