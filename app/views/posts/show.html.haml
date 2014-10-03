@@ -13,7 +13,7 @@
     %h5
       Date:
       = format_datetime(@post.created_at)
-    %p= @post.content
+    %p= raw @post.content
   .col-xs-12.col-md-4
 
 

@@ -40,8 +40,8 @@ RailsAdmin.config do |config|
 
     edit do
       field :title
-      field :summary
-      field :content
+      field :summary, :wysihtml5
+      field :content, :wysihtml5
       field :keywords
       field :description
     end
