@@ -4,14 +4,16 @@
   %meta{name: 'keywords', content: @post.keywords}
 - content_for :description do
   %meta{name: 'description', content: @post.description}
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Summary:
-  = @post.summary
-%p
-  %b Content:
-  = @post.content
 
-= link_to 'Back', posts_path
+
+.row
+  .col-xs-12.col-md-8
+    = link_to 'Previous Page', posts_redirect_path
+    %h3= @post.title
+    %h5
+      Date:
+      = format_datetime(@post.created_at)
+    %p= @post.content
+  .col-xs-12.col-md-4
+
+
