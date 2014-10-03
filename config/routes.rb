@@ -13,13 +13,11 @@ Rails.application.routes.draw do
 
   get 'posts_redirect', to: 'posts#posts_redirect', as: :posts_redirect
 
-  get 'errors/show'
-
   get 'home', to: 'pages#home', as: :home
   get 'work', to: 'pages#work', as: :work
   get 'about', to: 'pages#about', as: :about
 
-  match ':status', to: 'errors#show', constraints: {status: /\d{3}/}, via: :all
+  match '(errors)/:status', to: 'errors#show', constraints: {status: /\d{3}/}, via: :all
 
   root 'pages#home'
 
