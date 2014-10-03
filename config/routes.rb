@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admins', as: 'rails_admin'
 
+  get 'posts_redirect', to: 'posts#posts_redirect', as: :posts_redirect
+
   get 'errors/show'
 
   get 'home', to: 'pages#home', as: :home

@@ -30,4 +30,14 @@ RSpec.describe 'Posts', type: :request do
 
   end
 
+  context 'GET /posts_redirect' do
+
+    it 'redirects to posts' do
+      get '/posts_redirect'
+
+      expect(response).to redirect_to(posts_path)
+    end
+
+  end
+
 end
