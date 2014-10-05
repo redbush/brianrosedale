@@ -12,12 +12,20 @@ RSpec.describe 'Errors', type: :routing do
                              )
     end
 
-    it 'POST 404 routes to errors#show' do
-      expect(post: '/404').to route_to(
-                                  controller: 'errors',
-                                  action: 'show',
-                                  status: '404'
-                              )
+    it 'GET 401 routes to errors#show' do
+      expect(get: '/401').to route_to(
+                                 controller: 'errors',
+                                 action: 'show',
+                                 status: '401'
+                             )
+    end
+
+    it 'GET 422 routes to errors#show' do
+      expect(get: '/422').to route_to(
+                                 controller: 'errors',
+                                 action: 'show',
+                                 status: '422'
+                             )
     end
 
     it 'GET 500 routes to errors#show' do
@@ -26,14 +34,6 @@ RSpec.describe 'Errors', type: :routing do
                                  action: 'show',
                                  status: '500'
                              )
-    end
-
-    it 'POST 500 routes to errors#show' do
-      expect(post: '/500').to route_to(
-                                  controller: 'errors',
-                                  action: 'show',
-                                  status: '500'
-                              )
     end
 
   end
